@@ -1,3 +1,6 @@
 [submodule "submodule/cinatra"]
 	path = submodule/cinatra
 	url = https://github.com/qicosmos/cinatra
+[submodule "submodule/nlohmann-json"]
+	path = submodule/nlohmann-json
+	url = https://github.com/nlohmann/json
