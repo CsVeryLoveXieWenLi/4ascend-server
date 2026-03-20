@@ -7,3 +7,4 @@ build/
 
 # Clangd cache
 .cache
+compile_commands.json
