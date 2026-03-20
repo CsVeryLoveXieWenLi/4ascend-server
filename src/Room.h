@@ -7,16 +7,14 @@
 
 #include "Player.h"
 
-#include <cstdint>
-#include <vector>
+#include <unordered_map>
 
 
 struct Room {
-    std::mutex mu; // 锁
+    std::mutex mu;
 
-    uint32_t seed; // 目前对局种子
-    std::string id; // 目前对局信息
+    std::shared_ptr<Player> player1; // 玩家1
+    std::shared_ptr<Player> player2; // 玩家2
 
-    std::vector<std::shared_ptr<Player>> player; // 游戏玩家
-    std::vector<std::shared_ptr<Player>> sub;    // 观战玩家
+    std::unordered_map<std::string, std::shared_ptr<Player>> subscriber; // 观战玩家
 };

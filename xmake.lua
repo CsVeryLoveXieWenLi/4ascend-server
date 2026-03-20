@@ -25,6 +25,7 @@ add_rules("mode.release")
 
 -- 头文件路径
 add_includedirs("./submodule/cinatra/include")
+add_includedirs("./submodule/nlohmann-json/include")
 
 
 -- 优化等级

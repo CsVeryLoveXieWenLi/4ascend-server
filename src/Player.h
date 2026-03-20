@@ -5,7 +5,7 @@
  */
 #pragma once
 
-#include <cinatra.hpp>
+#include <cinatra/coro_http_connection.hpp>
 
 #include <string>
 
