@@ -1,8 +1,48 @@
-add_rules("mode.debug", "mode.release")
+--[[
+Author: CsVeryLoveXieWenLi
+Description: 4ascend-server
+@Copyright (c) 2026 by CsVeryLoveXieWenLi, All Rights Reserved.
+--]]
 
+-- xmake project -k compile_commands
+
+
+-- 运行库
+if is_os("windows") then
+    set_runtimes("MT")
+end
+
+
+-- 模式
+add_rules("mode.release")
+-- add_rules("mode.releasedbg")
+
+
+-- 指令集
+-- add_vectorexts("avx2")
+-- add_vectorexts("sse4.2")
+
+
+-- 头文件路径
+add_includedirs("./submodule/cinatra/include")
+
+
+-- 优化等级
+set_optimize("fastest")
+
+
+-- 语言版本
+set_languages("clatest", "c++20")
+
+
+-- 任务配置
 target("4ascend-server")
     set_kind("binary")
     add_files("src/*.cpp")
+
+    set_strip("all")
+    set_symbols("hidden")
+
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
