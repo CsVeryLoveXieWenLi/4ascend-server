@@ -1,0 +1,3 @@
+[submodule "submodule/cinatra"]
+	path = submodule/cinatra
+	url = https://github.com/qicosmos/cinatra
